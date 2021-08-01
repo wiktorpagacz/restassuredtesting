@@ -1,6 +1,5 @@
 import io.restassured.http.ContentType;
 import org.json.simple.JSONObject;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -42,7 +41,7 @@ public class DataDrivenExamples1 extends DataForTests{
     @Parameters({"userId"})
     @Test
     public void test_delete2(int userId) {
-        System.out.println("Valeu for userId is: " + userId);
+        System.out.println("Value for userId is: " + userId);
         baseURI = "http://localhost:3000/";
         when().
                 delete("/users/"+ userId).
